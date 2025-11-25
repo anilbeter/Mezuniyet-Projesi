@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_717f3a9c3407b08af5a06fd4c64439db {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_717f3a9c3407b08af5a06fd4c64439db" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_717f3a9c3407b08af5a06fd4c64439db = L.map(
+                "map_717f3a9c3407b08af5a06fd4c64439db",
+                {
+                    center: [40.45, 30.9],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4562d1af06df6e79186c8aaab70ac759 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4562d1af06df6e79186c8aaab70ac759.addTo(map_717f3a9c3407b08af5a06fd4c64439db);
+        
+    
+            var feature_group_315e4f56e728be6b48e2c91386ec1836 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_27d9deb263b4515d0a6ad1847c588846 = L.marker(
+                [40.1068, 32.5577],
+                {
+}
+            ).addTo(feature_group_315e4f56e728be6b48e2c91386ec1836);
+        
+    
+            var icon_bc23ad20020246f533b5b02f347da134 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_06bc6191b0d7ded6b9dd986f70719d16 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dc3c09ff92e26da70833bbc795dbec30 = $(`<div id="html_dc3c09ff92e26da70833bbc795dbec30" style="width: 100.0%; height: 100.0%;">BAŞLANGIÇ: Ankara Lojistik Üssü</div>`)[0];
+                popup_06bc6191b0d7ded6b9dd986f70719d16.setContent(html_dc3c09ff92e26da70833bbc795dbec30);
+            
+        
+
+        marker_27d9deb263b4515d0a6ad1847c588846.bindPopup(popup_06bc6191b0d7ded6b9dd986f70719d16)
+        ;
+
+        
+    
+    
+            marker_27d9deb263b4515d0a6ad1847c588846.bindTooltip(
+                `<div>
+                     Tırların Ana Çıkış Noktası
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_27d9deb263b4515d0a6ad1847c588846.setIcon(icon_bc23ad20020246f533b5b02f347da134);
+            
+    
+            feature_group_315e4f56e728be6b48e2c91386ec1836.addTo(map_717f3a9c3407b08af5a06fd4c64439db);
+        
+    
+            var feature_group_a96e8bbbe92d115e193b8761fd7108d8 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_4528d68861d3378e8edc0fd67629a074 = L.circleMarker(
+                [40.088, 32.484],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a96e8bbbe92d115e193b8761fd7108d8);
+        
+    
+        var popup_c4a80ae044970cd9d5b037cf5c59c58d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1cbb7463d592e7e15431915cd7f12915 = $(`<div id="html_1cbb7463d592e7e15431915cd7f12915" style="width: 100.0%; height: 100.0%;"><b>Potansiyel Konum (O-4):</b><br>j5: Akıncı Gişeleri</div>`)[0];
+                popup_c4a80ae044970cd9d5b037cf5c59c58d.setContent(html_1cbb7463d592e7e15431915cd7f12915);
+            
+        
+
+        circle_marker_4528d68861d3378e8edc0fd67629a074.bindPopup(popup_c4a80ae044970cd9d5b037cf5c59c58d)
+        ;
+
+        
+    
+    
+            circle_marker_4528d68861d3378e8edc0fd67629a074.bindTooltip(
+                `<div>
+                     j5: Akıncı Gişeleri
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_daab5829e2440448dc26b2c4a6bc4288 = L.circleMarker(
+                [40.803, 32.201],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a96e8bbbe92d115e193b8761fd7108d8);
+        
+    
+        var popup_7a717758ae10f25288b9929f544e6fd6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_420c975d56a789e82fd4bc8ee3fe0f5b = $(`<div id="html_420c975d56a789e82fd4bc8ee3fe0f5b" style="width: 100.0%; height: 100.0%;"><b>Potansiyel Konum (O-4):</b><br>j4: Gerede Kavşağı</div>`)[0];
+                popup_7a717758ae10f25288b9929f544e6fd6.setContent(html_420c975d56a789e82fd4bc8ee3fe0f5b);
+            
+        
+
+        circle_marker_daab5829e2440448dc26b2c4a6bc4288.bindPopup(popup_7a717758ae10f25288b9929f544e6fd6)
+        ;
+
+        
+    
+    
+            circle_marker_daab5829e2440448dc26b2c4a6bc4288.bindTooltip(
+                `<div>
+                     j4: Gerede Kavşağı
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5e01186d4061c6aa6040f5fe8cdd2278 = L.circleMarker(
+                [40.753, 31.802],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a96e8bbbe92d115e193b8761fd7108d8);
+        
+    
+        var popup_830d0079162dcf30477afb657baef103 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_923664199ddecdccdb1f729a61f4a68e = $(`<div id="html_923664199ddecdccdb1f729a61f4a68e" style="width: 100.0%; height: 100.0%;"><b>Potansiyel Konum (O-4):</b><br>j3: Bolu Tüneli</div>`)[0];
+                popup_830d0079162dcf30477afb657baef103.setContent(html_923664199ddecdccdb1f729a61f4a68e);
+            
+        
+
+        circle_marker_5e01186d4061c6aa6040f5fe8cdd2278.bindPopup(popup_830d0079162dcf30477afb657baef103)
+        ;
+
+        
+    
+    
+            circle_marker_5e01186d4061c6aa6040f5fe8cdd2278.bindTooltip(
+                `<div>
+                     j3: Bolu Tüneli
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5103384ad17dc88e55dace40580fcea7 = L.circleMarker(
+                [40.73, 30.4],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a96e8bbbe92d115e193b8761fd7108d8);
+        
+    
+        var popup_277a30bb5a365471b344c09dd78c8a10 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f1883892a30a6ca7a7f6630071462302 = $(`<div id="html_f1883892a30a6ca7a7f6630071462302" style="width: 100.0%; height: 100.0%;"><b>Potansiyel Konum (O-4):</b><br>j2: Sakarya Kavşağı</div>`)[0];
+                popup_277a30bb5a365471b344c09dd78c8a10.setContent(html_f1883892a30a6ca7a7f6630071462302);
+            
+        
+
+        circle_marker_5103384ad17dc88e55dace40580fcea7.bindPopup(popup_277a30bb5a365471b344c09dd78c8a10)
+        ;
+
+        
+    
+    
+            circle_marker_5103384ad17dc88e55dace40580fcea7.bindTooltip(
+                `<div>
+                     j2: Sakarya Kavşağı
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_43a4d8476f08489bf8d172bf97ceed08 = L.circleMarker(
+                [40.781, 29.53],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a96e8bbbe92d115e193b8761fd7108d8);
+        
+    
+        var popup_07f157205003d4422b5e9122f98d61ef = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b28fb899dbb5033979a8d567d5edbea = $(`<div id="html_2b28fb899dbb5033979a8d567d5edbea" style="width: 100.0%; height: 100.0%;"><b>Potansiyel Konum (O-4):</b><br>j1: Gebze/Dilovası</div>`)[0];
+                popup_07f157205003d4422b5e9122f98d61ef.setContent(html_2b28fb899dbb5033979a8d567d5edbea);
+            
+        
+
+        circle_marker_43a4d8476f08489bf8d172bf97ceed08.bindPopup(popup_07f157205003d4422b5e9122f98d61ef)
+        ;
+
+        
+    
+    
+            circle_marker_43a4d8476f08489bf8d172bf97ceed08.bindTooltip(
+                `<div>
+                     j1: Gebze/Dilovası
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_77cfd0b2227450979c30450e18a04838 = L.polyline(
+                [[40.1068, 32.5577], [40.088, 32.484], [40.29, 32.5], [40.5, 32.35], [40.803, 32.201], [40.78, 32.0], [40.753, 31.802], [40.78, 31.38], [40.75, 30.75], [40.73, 30.4], [40.75, 30.05], [40.781, 29.53]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(feature_group_a96e8bbbe92d115e193b8761fd7108d8);
+        
+    
+            poly_line_77cfd0b2227450979c30450e18a04838.bindTooltip(
+                `<div>
+                     Güzergah i_1: O-4 Anadolu Otoyolu (Paralı)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_a96e8bbbe92d115e193b8761fd7108d8.addTo(map_717f3a9c3407b08af5a06fd4c64439db);
+        
+    
+            var feature_group_2f9782e1cfe21660b3b1dce5aa2351ba = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_ef8e6cfbbdd79cb52176732618965f44 = L.circleMarker(
+                [40.741, 31.605],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2f9782e1cfe21660b3b1dce5aa2351ba);
+        
+    
+        var popup_7947eb56a52cca46e0603ce04fec7701 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c975703ac7cfed026d58812f96bb8612 = $(`<div id="html_c975703ac7cfed026d58812f96bb8612" style="width: 100.0%; height: 100.0%;"><b>Potansiyel Konum (D-100):</b><br>j7: Bolu Şehir Geçişi</div>`)[0];
+                popup_7947eb56a52cca46e0603ce04fec7701.setContent(html_c975703ac7cfed026d58812f96bb8612);
+            
+        
+
+        circle_marker_ef8e6cfbbdd79cb52176732618965f44.bindPopup(popup_7947eb56a52cca46e0603ce04fec7701)
+        ;
+
+        
+    
+    
+            circle_marker_ef8e6cfbbdd79cb52176732618965f44.bindTooltip(
+                `<div>
+                     j7: Bolu Şehir Geçişi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_faf194981c8c84efbe8580f35e1ec895 = L.circleMarker(
+                [40.844, 31.16],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2f9782e1cfe21660b3b1dce5aa2351ba);
+        
+    
+        var popup_9b6d882d0a3ca58975f82178d8c2b92f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1d4ca2acc3e62bf1a98cc8230aed590d = $(`<div id="html_1d4ca2acc3e62bf1a98cc8230aed590d" style="width: 100.0%; height: 100.0%;"><b>Potansiyel Konum (D-100):</b><br>j6: Düzce Şehir Geçişi</div>`)[0];
+                popup_9b6d882d0a3ca58975f82178d8c2b92f.setContent(html_1d4ca2acc3e62bf1a98cc8230aed590d);
+            
+        
+
+        circle_marker_faf194981c8c84efbe8580f35e1ec895.bindPopup(popup_9b6d882d0a3ca58975f82178d8c2b92f)
+        ;
+
+        
+    
+    
+            circle_marker_faf194981c8c84efbe8580f35e1ec895.bindTooltip(
+                `<div>
+                     j6: Düzce Şehir Geçişi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7219d71093e40ae9c4fa503523e0f0f7 = L.circleMarker(
+                [40.77, 30.4],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2f9782e1cfe21660b3b1dce5aa2351ba);
+        
+    
+        var popup_e9d4b562da242d3cf949ad25f084927a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8c2595b6f10a3bea69c3c47c08fe1719 = $(`<div id="html_8c2595b6f10a3bea69c3c47c08fe1719" style="width: 100.0%; height: 100.0%;"><b>Potansiyel Konum (D-100):</b><br>j8: Sakarya Şehir Geçişi</div>`)[0];
+                popup_e9d4b562da242d3cf949ad25f084927a.setContent(html_8c2595b6f10a3bea69c3c47c08fe1719);
+            
+        
+
+        circle_marker_7219d71093e40ae9c4fa503523e0f0f7.bindPopup(popup_e9d4b562da242d3cf949ad25f084927a)
+        ;
+
+        
+    
+    
+            circle_marker_7219d71093e40ae9c4fa503523e0f0f7.bindTooltip(
+                `<div>
+                     j8: Sakarya Şehir Geçişi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b88746e141e53ea4284fdbc34c590a69 = L.circleMarker(
+                [40.765, 29.92],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2f9782e1cfe21660b3b1dce5aa2351ba);
+        
+    
+        var popup_184f00c03684ca3dd43bb8ec84625b76 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_333dda030452eb09095aa168e3cbe4db = $(`<div id="html_333dda030452eb09095aa168e3cbe4db" style="width: 100.0%; height: 100.0%;"><b>Potansiyel Konum (D-100):</b><br>j9: Kocaeli Şehir Geçişi</div>`)[0];
+                popup_184f00c03684ca3dd43bb8ec84625b76.setContent(html_333dda030452eb09095aa168e3cbe4db);
+            
+        
+
+        circle_marker_b88746e141e53ea4284fdbc34c590a69.bindPopup(popup_184f00c03684ca3dd43bb8ec84625b76)
+        ;
+
+        
+    
+    
+            circle_marker_b88746e141e53ea4284fdbc34c590a69.bindTooltip(
+                `<div>
+                     j9: Kocaeli Şehir Geçişi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_501c927e34cc38b0f8ff2d4b8ea662e7 = L.polyline(
+                [[40.1068, 32.5577], [40.09, 32.53], [39.99, 32.5], [39.95, 32.25], [40.15, 31.93], [40.4, 31.75], [40.741, 31.605], [40.844, 31.16], [40.77, 30.4], [40.765, 29.92]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(feature_group_2f9782e1cfe21660b3b1dce5aa2351ba);
+        
+    
+            poly_line_501c927e34cc38b0f8ff2d4b8ea662e7.bindTooltip(
+                `<div>
+                     Güzergah i_2: D-100 Devlet Yolu (Ücretsiz)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_2f9782e1cfe21660b3b1dce5aa2351ba.addTo(map_717f3a9c3407b08af5a06fd4c64439db);
+        
+    
+            var layer_control_22bee5cab80859be9b36a93b672d560b_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_4562d1af06df6e79186c8aaab70ac759,
+                },
+                overlays :  {
+                    "Ba\u015flang\u0131\u00e7: Ankara Lojistik \u00dcss\u00fc" : feature_group_315e4f56e728be6b48e2c91386ec1836,
+                    "i_1: Otoyol Rotas\u0131 (O-4 / E80)" : feature_group_a96e8bbbe92d115e193b8761fd7108d8,
+                    "i_2: Devlet Yolu Rotas\u0131 (D-100)" : feature_group_2f9782e1cfe21660b3b1dce5aa2351ba,
+                },
+            };
+            let layer_control_22bee5cab80859be9b36a93b672d560b = L.control.layers(
+                layer_control_22bee5cab80859be9b36a93b672d560b_layers.base_layers,
+                layer_control_22bee5cab80859be9b36a93b672d560b_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_717f3a9c3407b08af5a06fd4c64439db);
+
+        
+</script>
+</html>

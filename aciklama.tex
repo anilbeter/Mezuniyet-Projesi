@@ -1,0 +1,117 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath} % Denklemler için
+\usepackage{amssymb} % \checkmark ve \times sembolleri için
+
+\begin{document}
+
+\section*{Kural 2'nin Mantıksal Açıklaması (Kör Nokta Kalmayacak!)}
+
+``Kapsanması zorunlu'' denilen \textit{her bir rotanın} istisnasız bir şekilde denetlenmesini garanti altına alır.
+
+\subsection*{1. Malzemeler (Senin Verilerin)}
+
+\begin{itemize}
+  \item \textbf{Rotalar ($I$ Kümesi):} Kapsamak istediğin 2 rota var:
+        \begin{itemize}
+          \item $i_1$: Ankara $\rightarrow$ İzmir Rotası
+          \item $i_2$: Bolu $\rightarrow$ İzmir Rotası
+        \end{itemize}
+
+  \item \textbf{Konumlar ($J$ Kümesi):} Sensör koyabileceğin 3 yer var:
+        \begin{itemize}
+          \item $j_1$: Gerede
+          \item $j_2$: Susurluk
+          \item $j_3$: Manisa
+        \end{itemize}
+
+  \item \textbf{$a_{ij}$ Matrisi (Kim Kimi Görüyor?):}
+        \begin{itemize}
+          \item $i_1$ (Ankara $\rightarrow$ İz) rotası: Gerede ($j_1$), Susurluk ($j_2$) ve Manisa'dan ($j_3$) geçer.
+          \item $i_2$ (Bolu $\rightarrow$ İz) rotası: Gerede'den ($j_1$) \textbf{GEÇMEZ}, ama Susurluk ($j_2$) ve Manisa'dan ($j_3$) geçer.
+        \end{itemize}
+\end{itemize}
+
+\subsubsection*{KURAL A (Rota $i_1$ için):}
+
+Model, $i_1$ (Ankara $\rightarrow$ İzmir) rotasını alır ve ``Bu rotayı hangi konumlar görüyordu?'' diye $a_{ij}$ matrisine bakar.
+\begin{itemize}
+  \item Gerede ($j_1$) görüyor mu? Evet ($a_{1,1}=1$)
+  \item Susurluk ($j_2$) görüyor mu? Evet ($a_{1,2}=1$)
+  \item Manisa ($j_3$) görüyor mu? Evet ($a_{1,3}=1$)
+\end{itemize}
+
+Şimdi denklemi yazar:
+\begin{equation*}
+  (a_{1,1} \cdot x_1) + (a_{1,2} \cdot x_2) + (a_{1,3} \cdot x_3) \ge 1
+\end{equation*}
+
+Yani:
+\begin{equation*}
+  (1 \cdot x_1) + (1 \cdot x_2) + (1 \cdot x_3) \ge 1
+\end{equation*}
+
+\begin{itemize}
+  \item \textbf{Bu Denklemin Anlamı:} ``Ankara-İzmir rotasını kurtarmak için, Gerede'ye sensör kurma kararın ($x_1$), Susurluk'a kurma kararın ($x_2$) veya Manisa'ya kurma kararın ($x_3$)\dots Bu üç karardan \textbf{en az bir tanesi 'EVET' (yani 1)} olmalıdır.''
+  \item Eğer üçüne de kurmazsan ($x_1=0, x_2=0, x_3=0$), toplam '0' olur. $0 \ge 1$ denklemi YANLIŞ çıkar ve model bu çözümü reddeder.
+\end{itemize}
+
+\subsubsection*{KURAL B (Rota $i_2$ için):}
+
+Model, $i_2$ (Bolu $\rightarrow$ İzmir) rotasını alır ve ``Bu rotayı hangi konumlar görüyordu?'' diye matrise bakar.
+\begin{itemize}
+  \item Gerede ($j_1$) görüyor mu? Hayır ($a_{2,1}=0$)
+  \item Susurluk ($j_2$) görüyor mu? Evet ($a_{2,2}=1$)
+  \item Manisa ($j_3$) görüyor mu? Evet ($a_{2,3}=1$)
+\end{itemize}
+
+Şimdi ikinci denklemi yazar:
+\begin{equation*}
+  (a_{2,1} \cdot x_1) + (a_{2,2} \cdot x_2) + (a_{2,3} \cdot x_3) \ge 1
+\end{equation*}
+
+Yani:
+\begin{equation*}
+  (0 \cdot x_1) + (1 \cdot x_2) + (1 \cdot x_3) \ge 1
+\end{equation*}
+
+\begin{itemize}
+  \item \textbf{Bu Denklemin Anlamı:} ``Bolu-İzmir rotasını kurtarmak için, Susurluk'a kurma kararın ($x_2$) veya Manisa'ya kurma kararın ($x_3$)\dots Bu iki karardan \textbf{en az bir tanesi 'EVET' (yani 1)} olmalıdır.''
+  \item \textbf{Kritik Detay:} Model burada Gerede'ye sensör kurup kurmamanı ($x_1$) \textbf{umursamaz}. Çünkü $a_{2,1}=0$. Yani sen Gerede'ye sensör kursan bile ($x_1=1$ olsa dahi), $0 \cdot 1 = 0$ olacağı için bu rotanın denetlenmesine zerre faydası olmaz.
+\end{itemize}
+
+\subsection*{3. Modelin Amacıyla Çatışması (Çözüm)}
+
+Modelin iki zıt güdüsü vardır:
+\begin{enumerate}
+  \item \textbf{Kural 1 (Amaç):} ``Maliyeti düşür!'' (Yani $x_1, x_2, x_3$'ü mümkünse 0 yap).
+  \item \textbf{Kural 2 (Kısıtlar):} ``Kör nokta bırakma!'' (Yani aşağıdaki iki kuralı da SAĞLA):
+        \begin{itemize}
+          \item Kural A: $x_1 + x_2 + x_3 \ge 1$ (Rota 1'i kurtar)
+          \item Kural B: $x_2 + x_3 \ge 1$ (Rota 2'yi kurtar)
+        \end{itemize}
+\end{enumerate}
+
+Model bu iki zıt güdüyü dengeler. ``Hem Kural A'yı hem de Kural B'yi aynı anda sağlayan \textbf{en az sayıda} $x$ (sensör) hangisidir?'' diye bakar.
+
+\begin{itemize}
+  \item ``Sadece Gerede'ye kursam ($x_1=1$)?''
+        \begin{itemize}
+          \item Kural A: $1+0+0 \ge 1$ (Sağlandı $\checkmark$)
+          \item Kural B: $0+0 \ge 1$ (Sağlanmadı! $\times$) $\rightarrow$ Geçersiz Çözüm.
+        \end{itemize}
+
+  \item ``Sadece Susurluk'a kursam ($x_2=1$)?''
+        \begin{itemize}
+          \item Kural A: $0+1+0 \ge 1$ (Sağlandı $\checkmark$)
+          \item Kural B: $1+0 \ge 1$ (Sağlandı $\checkmark$) $\rightarrow$ \textbf{Geçerli Çözüm!}
+        \end{itemize}
+\end{itemize}
+
+Model, sadece Susurluk'a ($x_2=1$) bir sensör kurarak \textit{tüm rotaları} (hem $i_1$'i hem $i_2$'yi) denetleyebileceğini bulur. Eğer Manisa'nın maliyeti Susurluk'tan daha ucuzsa, cevabı ``Manisa'ya kur'' olarak da verebilir. Ama sonuçta 1 sensörle bu işi çözebileceğini anlar.
+
+\bigskip % Biraz boşluk ekler
+\textbf{Özetle Kural 2:} Belirlediğin her bir rotanın denetimsiz kalmamasını (en az bir sensör tarafından görülmesini) matematiksel olarak garanti altına alan ``sigorta'' kurallarıdır.
+
+\end{document}

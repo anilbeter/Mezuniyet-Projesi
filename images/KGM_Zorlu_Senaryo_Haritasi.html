@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_89d1107265bf0697ac8173d13405e787 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_89d1107265bf0697ac8173d13405e787" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_89d1107265bf0697ac8173d13405e787 = L.map(
+                "map_89d1107265bf0697ac8173d13405e787",
+                {
+                    center: [40.6, 32.4],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e3a59fdff57a0a399abd5f9ae5f64c5e = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e3a59fdff57a0a399abd5f9ae5f64c5e.addTo(map_89d1107265bf0697ac8173d13405e787);
+        
+    
+            var feature_group_91e1f2d290f203d85e7c74627bf798a6 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_da28287b82c237de0527e5cf4422ca3c = L.circleMarker(
+                [40.203, 32.685],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(feature_group_91e1f2d290f203d85e7c74627bf798a6);
+        
+    
+        var popup_6ddb4b3b2ced19be1aa94ae3e03776d4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ab871213ab26f196959d597cb3054b29 = $(`<div id="html_ab871213ab26f196959d597cb3054b29" style="width: 100.0%; height: 100.0%;"><b>j1_Kazan_Cikis_Ana</b><br>Maliyet: 45 Milyon TL<br>Tip: Pahalı Merkez</div>`)[0];
+                popup_6ddb4b3b2ced19be1aa94ae3e03776d4.setContent(html_ab871213ab26f196959d597cb3054b29);
+            
+        
+
+        circle_marker_da28287b82c237de0527e5cf4422ca3c.bindPopup(popup_6ddb4b3b2ced19be1aa94ae3e03776d4)
+        ;
+
+        
+    
+    
+            circle_marker_da28287b82c237de0527e5cf4422ca3c.bindTooltip(
+                `<div>
+                     j1_Kazan_Cikis_Ana (45M TL)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5f5ea22d621d5bb376a485f2b4054b73 = L.circleMarker(
+                [40.472, 32.652],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_91e1f2d290f203d85e7c74627bf798a6);
+        
+    
+        var popup_811fb75c7898d7aff41c87db670605e5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_003aaf47ba03fd3f142fb5c13bdb301c = $(`<div id="html_003aaf47ba03fd3f142fb5c13bdb301c" style="width: 100.0%; height: 100.0%;"><b>j2_Kizilcahamam_Merkez</b><br>Maliyet: 15 Milyon TL<br>Tip: Orta</div>`)[0];
+                popup_811fb75c7898d7aff41c87db670605e5.setContent(html_003aaf47ba03fd3f142fb5c13bdb301c);
+            
+        
+
+        circle_marker_5f5ea22d621d5bb376a485f2b4054b73.bindPopup(popup_811fb75c7898d7aff41c87db670605e5)
+        ;
+
+        
+    
+    
+            circle_marker_5f5ea22d621d5bb376a485f2b4054b73.bindTooltip(
+                `<div>
+                     j2_Kizilcahamam_Merkez (15M TL)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a116f8ba0bc3429a879729eb1f8de0e5 = L.circleMarker(
+                [40.485, 32.61],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_91e1f2d290f203d85e7c74627bf798a6);
+        
+    
+        var popup_e553f1762c532883d2eb3d18180aa257 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_46cba47af5c8e24e023b884497e40a2f = $(`<div id="html_46cba47af5c8e24e023b884497e40a2f" style="width: 100.0%; height: 100.0%;"><b>j3_Dag_Yolu_Giris</b><br>Maliyet: 20 Milyon TL<br>Tip: Pahalı Dağ</div>`)[0];
+                popup_e553f1762c532883d2eb3d18180aa257.setContent(html_46cba47af5c8e24e023b884497e40a2f);
+            
+        
+
+        circle_marker_a116f8ba0bc3429a879729eb1f8de0e5.bindPopup(popup_e553f1762c532883d2eb3d18180aa257)
+        ;
+
+        
+    
+    
+            circle_marker_a116f8ba0bc3429a879729eb1f8de0e5.bindTooltip(
+                `<div>
+                     j3_Dag_Yolu_Giris (20M TL)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_11f8e797e0d14abaad09a47e7c265636 = L.circleMarker(
+                [40.558, 32.555],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_91e1f2d290f203d85e7c74627bf798a6);
+        
+    
+        var popup_f6962595aced450d617e03321553c758 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d54c601d22ceed5ef6ba7c2538a34e3f = $(`<div id="html_d54c601d22ceed5ef6ba7c2538a34e3f" style="width: 100.0%; height: 100.0%;"><b>j4_Pinar_Istasyonu</b><br>Maliyet: 4 Milyon TL<br>Tip: Ucuz (Mevcut)</div>`)[0];
+                popup_f6962595aced450d617e03321553c758.setContent(html_d54c601d22ceed5ef6ba7c2538a34e3f);
+            
+        
+
+        circle_marker_11f8e797e0d14abaad09a47e7c265636.bindPopup(popup_f6962595aced450d617e03321553c758)
+        ;
+
+        
+    
+    
+            circle_marker_11f8e797e0d14abaad09a47e7c265636.bindTooltip(
+                `<div>
+                     j4_Pinar_Istasyonu (4M TL)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_44875161eae7084a76fbb551315899ef = L.circleMarker(
+                [40.558, 32.535],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_91e1f2d290f203d85e7c74627bf798a6);
+        
+    
+        var popup_79d8d9335bf0a6729819727e1647c5d6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ba9d012a80dbc334b297c029b069b698 = $(`<div id="html_ba9d012a80dbc334b297c029b069b698" style="width: 100.0%; height: 100.0%;"><b>j5_Pinar_Arka_Kacak</b><br>Maliyet: 6 Milyon TL<br>Tip: Ucuz (Tali)</div>`)[0];
+                popup_79d8d9335bf0a6729819727e1647c5d6.setContent(html_ba9d012a80dbc334b297c029b069b698);
+            
+        
+
+        circle_marker_44875161eae7084a76fbb551315899ef.bindPopup(popup_79d8d9335bf0a6729819727e1647c5d6)
+        ;
+
+        
+    
+    
+            circle_marker_44875161eae7084a76fbb551315899ef.bindTooltip(
+                `<div>
+                     j5_Pinar_Arka_Kacak (6M TL)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3f513a0f673a269226e183c395ef656b = L.circleMarker(
+                [40.785, 32.225],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_91e1f2d290f203d85e7c74627bf798a6);
+        
+    
+        var popup_4bfdfe12e42acae3ed1036596cae84ce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bb509609ebef83be13b338fea32bdfd8 = $(`<div id="html_bb509609ebef83be13b338fea32bdfd8" style="width: 100.0%; height: 100.0%;"><b>j6_Gerede_Giris_Bogazi</b><br>Maliyet: 12 Milyon TL<br>Tip: Orta (Stratejik)</div>`)[0];
+                popup_4bfdfe12e42acae3ed1036596cae84ce.setContent(html_bb509609ebef83be13b338fea32bdfd8);
+            
+        
+
+        circle_marker_3f513a0f673a269226e183c395ef656b.bindPopup(popup_4bfdfe12e42acae3ed1036596cae84ce)
+        ;
+
+        
+    
+    
+            circle_marker_3f513a0f673a269226e183c395ef656b.bindTooltip(
+                `<div>
+                     j6_Gerede_Giris_Bogazi (12M TL)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3fed97fd74ab77de868be7a71807e68d = L.circleMarker(
+                [40.77, 32.18],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_91e1f2d290f203d85e7c74627bf798a6);
+        
+    
+        var popup_a7e5b8e7e06d576659b104d57cd50dd5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_22c62bdc0274d22e9bc0a2fdde2be85b = $(`<div id="html_22c62bdc0274d22e9bc0a2fdde2be85b" style="width: 100.0%; height: 100.0%;"><b>j7_Gerede_Koy_Yolu</b><br>Maliyet: 14 Milyon TL<br>Tip: Orta</div>`)[0];
+                popup_a7e5b8e7e06d576659b104d57cd50dd5.setContent(html_22c62bdc0274d22e9bc0a2fdde2be85b);
+            
+        
+
+        circle_marker_3fed97fd74ab77de868be7a71807e68d.bindPopup(popup_a7e5b8e7e06d576659b104d57cd50dd5)
+        ;
+
+        
+    
+    
+            circle_marker_3fed97fd74ab77de868be7a71807e68d.bindTooltip(
+                `<div>
+                     j7_Gerede_Koy_Yolu (14M TL)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2b563b7936a90b4b9942acec577e70d7 = L.circleMarker(
+                [40.765, 31.95],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(feature_group_91e1f2d290f203d85e7c74627bf798a6);
+        
+    
+        var popup_266fb902702ba024c207234d19c2b09f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e206bb220a5bf1532e6f31999ef81254 = $(`<div id="html_e206bb220a5bf1532e6f31999ef81254" style="width: 100.0%; height: 100.0%;"><b>j8_D100_Bolu_Duzlugu</b><br>Maliyet: 50 Milyon TL<br>Tip: Çok Pahalı</div>`)[0];
+                popup_266fb902702ba024c207234d19c2b09f.setContent(html_e206bb220a5bf1532e6f31999ef81254);
+            
+        
+
+        circle_marker_2b563b7936a90b4b9942acec577e70d7.bindPopup(popup_266fb902702ba024c207234d19c2b09f)
+        ;
+
+        
+    
+    
+            circle_marker_2b563b7936a90b4b9942acec577e70d7.bindTooltip(
+                `<div>
+                     j8_D100_Bolu_Duzlugu (50M TL)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2b0732fbc81bb7afad93f4434a4a1881 = L.circleMarker(
+                [40.805, 32.205],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_91e1f2d290f203d85e7c74627bf798a6);
+        
+    
+        var popup_a77fc4bea7ac3ba59794bf5c793a6c00 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_35b6bb4f085300523f5d98947336392b = $(`<div id="html_35b6bb4f085300523f5d98947336392b" style="width: 100.0%; height: 100.0%;"><b>j9_O4_Gerede_Giseler</b><br>Maliyet: 5 Milyon TL<br>Tip: Ucuz (Gişe)</div>`)[0];
+                popup_a77fc4bea7ac3ba59794bf5c793a6c00.setContent(html_35b6bb4f085300523f5d98947336392b);
+            
+        
+
+        circle_marker_2b0732fbc81bb7afad93f4434a4a1881.bindPopup(popup_a77fc4bea7ac3ba59794bf5c793a6c00)
+        ;
+
+        
+    
+    
+            circle_marker_2b0732fbc81bb7afad93f4434a4a1881.bindTooltip(
+                `<div>
+                     j9_O4_Gerede_Giseler (5M TL)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d863ea3249ca813e60fac24e9ba0fae4 = L.circleMarker(
+                [40.68, 32.05],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_91e1f2d290f203d85e7c74627bf798a6);
+        
+    
+        var popup_6237f35c3425a78bf56ecd52678400d5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a38ebfb981c99263d5d29fbd9f3963c7 = $(`<div id="html_a38ebfb981c99263d5d29fbd9f3963c7" style="width: 100.0%; height: 100.0%;"><b>j10_Eski_Bolu_Yolu</b><br>Maliyet: 16 Milyon TL<br>Tip: Pahalı (Issız)</div>`)[0];
+                popup_6237f35c3425a78bf56ecd52678400d5.setContent(html_a38ebfb981c99263d5d29fbd9f3963c7);
+            
+        
+
+        circle_marker_d863ea3249ca813e60fac24e9ba0fae4.bindPopup(popup_6237f35c3425a78bf56ecd52678400d5)
+        ;
+
+        
+    
+    
+            circle_marker_d863ea3249ca813e60fac24e9ba0fae4.bindTooltip(
+                `<div>
+                     j10_Eski_Bolu_Yolu (16M TL)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_91e1f2d290f203d85e7c74627bf798a6.addTo(map_89d1107265bf0697ac8173d13405e787);
+        
+    
+            var marker_dfe19d88666406d5381bb2ba91aad6ad = L.marker(
+                [40.1, 32.58],
+                {
+}
+            ).addTo(map_89d1107265bf0697ac8173d13405e787);
+        
+    
+            var icon_46d352772e0568fed477982579afd067 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_aa07b2508939fa3706d5f6ba931b9900 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5b4a2284c679e1e67e3e0e2dff117fe7 = $(`<div id="html_5b4a2284c679e1e67e3e0e2dff117fe7" style="width: 100.0%; height: 100.0%;">Ankara Lojistik Üssü</div>`)[0];
+                popup_aa07b2508939fa3706d5f6ba931b9900.setContent(html_5b4a2284c679e1e67e3e0e2dff117fe7);
+            
+        
+
+        marker_dfe19d88666406d5381bb2ba91aad6ad.bindPopup(popup_aa07b2508939fa3706d5f6ba931b9900)
+        ;
+
+        
+    
+    
+                marker_dfe19d88666406d5381bb2ba91aad6ad.setIcon(icon_46d352772e0568fed477982579afd067);
+            
+    
+            var marker_2b354b7019ae94b6c28325b0aa007fc7 = L.marker(
+                [40.51, 32.45],
+                {
+}
+            ).addTo(map_89d1107265bf0697ac8173d13405e787);
+        
+    
+            var icon_9f2a49ffffa01625608c4f2d82b1c6db = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4bbd28023cae05650133b6df1f7b16f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_07ce454744f0968677777481703ac331 = $(`<div id="html_07ce454744f0968677777481703ac331" style="width: 100.0%; height: 100.0%;">Çamlıdere Katılımı (Ara Giriş)</div>`)[0];
+                popup_4bbd28023cae05650133b6df1f7b16f5.setContent(html_07ce454744f0968677777481703ac331);
+            
+        
+
+        marker_2b354b7019ae94b6c28325b0aa007fc7.bindPopup(popup_4bbd28023cae05650133b6df1f7b16f5)
+        ;
+
+        
+    
+    
+                marker_2b354b7019ae94b6c28325b0aa007fc7.setIcon(icon_9f2a49ffffa01625608c4f2d82b1c6db);
+            
+    
+            var feature_group_d815d1ce1518cff314845f342d5e5aef = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_4a2d3b4ed2781a3654cc495fad3b22ce = L.polyline(
+                [[40.1, 32.58], [40.203, 32.685], [40.35, 32.66], [40.472, 32.652], [40.558, 32.555], [40.65, 32.45], [40.785, 32.225], [40.805, 32.205], [40.82, 31.9]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(feature_group_d815d1ce1518cff314845f342d5e5aef);
+        
+    
+            feature_group_d815d1ce1518cff314845f342d5e5aef.addTo(map_89d1107265bf0697ac8173d13405e787);
+        
+    
+            var feature_group_e75bb03eabc209380c5453e9bd8de140 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_bf1ffa5c81f58dd3e759a0f266693cec = L.polyline(
+                [[40.472, 32.652], [40.52, 32.6], [40.558, 32.535], [40.6, 32.5], [40.785, 32.225]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": "10, 10", "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_e75bb03eabc209380c5453e9bd8de140);
+        
+    
+            feature_group_e75bb03eabc209380c5453e9bd8de140.addTo(map_89d1107265bf0697ac8173d13405e787);
+        
+    
+            var feature_group_031e351db7374e6c3a8963b31705759a = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_78f3530fc5a0093a1c9946b38558458a = L.polyline(
+                [[40.472, 32.652], [40.485, 32.61], [40.6, 32.75], [40.75, 32.5], [40.785, 32.225]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_031e351db7374e6c3a8963b31705759a);
+        
+    
+            feature_group_031e351db7374e6c3a8963b31705759a.addTo(map_89d1107265bf0697ac8173d13405e787);
+        
+    
+            var feature_group_465a9508e064a65ede1679fd20bcab73 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_9f08c4f672bbc0343f540e1796db7dcc = L.polyline(
+                [[40.51, 32.45], [40.558, 32.555], [40.785, 32.225], [40.805, 32.205]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(feature_group_465a9508e064a65ede1679fd20bcab73);
+        
+    
+            feature_group_465a9508e064a65ede1679fd20bcab73.addTo(map_89d1107265bf0697ac8173d13405e787);
+        
+    
+            var layer_control_5afb1fe3685499a33bd41d45844e9765_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_e3a59fdff57a0a399abd5f9ae5f64c5e,
+                },
+                overlays :  {
+                    "Potansiyel Sens\u00f6r Konumlar\u0131 (J)" : feature_group_91e1f2d290f203d85e7c74627bf798a6,
+                    "i1: D\u00fcr\u00fcst Otoyolcu (Ye\u015fil)" : feature_group_d815d1ce1518cff314845f342d5e5aef,
+                    "i3: P\u0131nar \u0130stasyon Ka\u00e7a\u011f\u0131 (Turuncu)" : feature_group_e75bb03eabc209380c5453e9bd8de140,
+                    "i4: Da\u011f Yolu Ka\u00e7a\u011f\u0131 (K\u0131rm\u0131z\u0131)" : feature_group_031e351db7374e6c3a8963b31705759a,
+                    "i7: Ara Kat\u0131l\u0131m (\u00c7aml\u0131dere) - Mor" : feature_group_465a9508e064a65ede1679fd20bcab73,
+                },
+            };
+            let layer_control_5afb1fe3685499a33bd41d45844e9765 = L.control.layers(
+                layer_control_5afb1fe3685499a33bd41d45844e9765_layers.base_layers,
+                layer_control_5afb1fe3685499a33bd41d45844e9765_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_89d1107265bf0697ac8173d13405e787);
+
+        
+</script>
+</html>
